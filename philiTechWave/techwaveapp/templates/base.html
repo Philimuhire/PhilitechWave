@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Phili TechWave{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/home.css' %}">
+    {% block styles %}{% endblock %}
+</head>
+<body class="{% block body_class %}default{% endblock %}">
+    <nav class = "nav">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'ticket_list' %}">Tickets</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            {% if user.is_authenticated %}
+                <!-- If the user is logged in, show logout link -->
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <!-- If the user is not logged in, show login link -->
+                <li><a href="{% url 'login' %}">Login</a></li
+            {% endif %}
+        </ul>
+    </nav>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+

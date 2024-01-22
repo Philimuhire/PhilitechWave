@@ -1,0 +1,26 @@
+<!-- techwaveapp/templates/training_programs.html -->
+{% extends 'base.html' %}
+
+
+{% block styles %}
+{%load static%}
+  <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/training_programs.css' %}">
+{% endblock %}
+
+{% block title %}Training Programs{% endblock %}
+
+{% block content %}
+  <h2>Training Programs</h2>
+  <ul>
+    {% for program in training_programs %}
+      <li>
+        <h3>{{ program.title }}</h3>
+        <p>{{ program.description }}</p>
+        <p>Duration: {{ program.duration_days }} days</p>
+        <p>Start Date: {{ program.start_date }}</p>
+        <p>End Date: {{ program.end_date }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

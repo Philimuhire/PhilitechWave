@@ -1,0 +1,26 @@
+/* static/techwaveapp/css/ticket_detail.css */
+
+#content {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #555;
+}

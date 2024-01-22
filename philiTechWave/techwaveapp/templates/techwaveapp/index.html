@@ -1,0 +1,21 @@
+<!-- techwaveapp/templates/index.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block styles %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/styles.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div id="home-content">
+    <h2>Welcome to Philitech Wave</h2>
+    <p>Explore our services, training programs, and get in touch with us!</p>
+    <!-- Add more content or dynamic data based on your preferences -->
+  </div>
+{% endblock %}
+
+

@@ -1,0 +1,23 @@
+<!-- techwaveapp/templates/tickets.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Tickets{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/tickets.css' %}">
+{% endblock %}
+
+{% block content %}
+  <h2>Your Tickets</h2>
+  <ul>
+    {% for ticket in tickets %}
+      <li>
+        <h3>{{ ticket.title }}</h3>
+        <p>{{ ticket.description }}</p>
+        <p>Created at: {{ ticket.created_at }}</p>
+        <p>Updated at: {{ ticket.updated_at }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

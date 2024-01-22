@@ -1,0 +1,17 @@
+<!-- techwaveapp/templates/techwaveapp/cafe_usage.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cybercafe Usage Records</title>
+</head>
+<body>
+    <h1>Cybercafe Usage Records</h1>
+    <ul>
+        {% for record in cafe_usage_records %}
+            <li>{{ record.customer.name }} - {{ record.usage_date }} - {{ record.usage_duration_minutes }} minutes</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

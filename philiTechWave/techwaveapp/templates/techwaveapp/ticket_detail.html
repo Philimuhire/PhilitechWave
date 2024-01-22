@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Ticket Detail{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/ticket_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+  <h2>{{ ticket.title }}</h2>
+  <p>{{ ticket.description }}</p>
+  <p>Created at: {{ ticket.created_at }}</p>
+  <a href="{% url 'ticket_list' %}">Back to Your Tickets</a>
+{% endblock %}
+

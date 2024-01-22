@@ -1,0 +1,13 @@
+/* static/techwaveapp/css/training_programs.css */
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.program-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+}

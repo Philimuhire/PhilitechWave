@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_class %}create-ticket{% endblock %}
+
+{% block content %}
+  {% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/create_ticket.css' %}">
+  {% endblock %}
+
+  <h2>Create a New Ticket</h2>
+  <form method="post" action="{% url 'create_ticket' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Ticket</button>
+  </form>
+  <a href="{% url 'ticket_list' %}">Back to Your Tickets</a>
+{% endblock %}
+
+
