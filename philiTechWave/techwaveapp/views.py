@@ -83,3 +83,6 @@ def ticket_detail(request, ticket_id):
     ticket = Ticket.objects.get(id=ticket_id, user=request.user)
     return render(request, 'techwaveapp/ticket_detail.html', {'ticket': ticket})
 
+def training_programs(request):
+    return render(request, 'training_programs.html')
+

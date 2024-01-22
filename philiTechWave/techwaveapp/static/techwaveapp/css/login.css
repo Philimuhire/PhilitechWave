@@ -1,0 +1,47 @@
+/* static/techwaveapp/css/login.css */
+
+#content {
+    text-align: center;
+    padding: 0px;
+}
+
+h2 {
+    margin-top: 50px;
+    color: #333;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto; /* This will center the form horizontally */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 3vh; /* Adjust the margin-top for vertical centering */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+input {
+    width: calc(100% - 5px); /* Adjust the width as needed */
+    padding: 8px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}

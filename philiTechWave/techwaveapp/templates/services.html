@@ -13,6 +13,8 @@
     {% for service in services %}
       <li><strong>{{ service.name }}</strong> - {{ service.description }}</li>
     {% endfor %}
+    <li><strong>Training Programs</strong> - Explore our training programs <a href="{% url 'training_programs' %}">here</a></li>
   </ul>
+  <a href="{% url 'contact' %}" class="contact-button">Get in touch with us</a>
 {% endblock %}
 

@@ -1,13 +1,14 @@
 <!-- techwaveapp/templates/training_programs.html -->
+
 {% extends 'base.html' %}
 
-
-{% block styles %}
-{%load static%}
-  <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/training_programs.css' %}">
-{% endblock %}
+{% load static %}
 
 {% block title %}Training Programs{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/training_programs.css' %}">
+{% endblock %}
 
 {% block content %}
   <h2>Training Programs</h2>

@@ -5,10 +5,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding: 168px 20px; /* Adjust the top and bottom padding to increase the apparent height */
     text-align: center;
+    background-color: rgba(21, 21, 21, 0.5);
 }
 
 h2 {
-    color: #333;
+    color: #fff;
+}
+p{
+    color: #fff;
 }

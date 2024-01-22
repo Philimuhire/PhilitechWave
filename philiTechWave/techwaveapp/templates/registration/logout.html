@@ -2,8 +2,17 @@
 
 {% extends 'base.html' %}
 
-{% block content %}
-  <h2>Logout</h2>
-  <p>You have been successfully logged out.</p>
-  <p><a href="{% url 'login' %}">Login again</a>.</p>
+{% load static %}
+
+{% block title %}Logout{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/logout.css' %}">
 {% endblock %}
+
+{% block content %}
+    <h2>Logout</h2>
+    <p>You have been successfully logged out.</p>
+    <p><a href="{% url 'login' %}">Login again</a>.</p>
+{% endblock %}
+
