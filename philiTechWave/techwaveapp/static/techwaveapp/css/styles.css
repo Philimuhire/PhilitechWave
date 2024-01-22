@@ -5,29 +5,40 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    background-image: url('../techwave/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures the body takes at least the full height of the viewport */
 }
 
-nav {
+.nav {
     background-color: #333;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-nav ul {
+.logo a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.nav-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
 }
 
-nav li {
-    float: left;
+.nav-links li {
+    margin-right: 10px; /* Adjust the spacing between links as needed */
 }
 
-nav a {
+.nav-links a {
     display: block;
     color: white;
     text-align: center;
@@ -35,13 +46,43 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
+.nav-links a:hover {
     background-color: #ddd;
     color: black;
 }
 
 #content {
+    flex: 1; /* This makes the content area grow to fill the remaining space */
+    padding: 20px;
     padding: 20px;
     text-align: center;
 }
 
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Add this to allow items to wrap to the next line if needed */
+}
+
+.social-media p {
+    margin: 10px 0; /* Adjust the margin as needed */
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* You can adjust the background color as per your preference */
+.footer-container {
+    background-color: #222; /* Darker background color for the entire footer */
+}

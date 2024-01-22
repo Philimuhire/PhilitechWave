@@ -5,12 +5,14 @@
     <title>{% block title %}Phili TechWave{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/styles.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/home.css' %}">
     {% block styles %}{% endblock %}
 </head>
 <body class="{% block body_class %}default{% endblock %}">
     <nav class = "nav">
-        <ul>
+        <div class="logo">
+            <a href="{% url 'index' %}">PHILITECHWAVE</a>
+        </div>
+        <ul class="nav-links">
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'services' %}">Services</a></li>
             <li><a href="{% url 'ticket_list' %}">Tickets</a></li>
@@ -20,7 +22,7 @@
                 <li><a href="{% url 'logout' %}">Logout</a></li>
             {% else %}
                 <!-- If the user is not logged in, show login link -->
-                <li><a href="{% url 'login' %}">Login</a></li
+                <li><a href="{% url 'login' %}">Login</a></li>
             {% endif %}
         </ul>
     </nav>
@@ -28,6 +30,17 @@
     <div id="content">
         {% block content %}{% endblock %}
     </div>
+
+    <footer class="footer-container">
+        <div class="social-media">
+            <p>Follow us on our social media:</p>
+            <a href="https://www.facebook.com/your_facebook_page" target="_blank">Facebook</a>
+            <a href="https://twitter.com/your_twitter_handle" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/your_instagram_handle" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
 </body>
 </html>
 

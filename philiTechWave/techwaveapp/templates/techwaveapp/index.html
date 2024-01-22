@@ -1,12 +1,11 @@
 <!-- techwaveapp/templates/index.html -->
 
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
 
 {% block styles %}
-  {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/styles.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/home.css' %}">
 {% endblock %}
 
@@ -17,5 +16,6 @@
     <!-- Add more content or dynamic data based on your preferences -->
   </div>
 {% endblock %}
+
 
 
