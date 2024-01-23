@@ -1,12 +1,5 @@
 /* static/techwaveapp/css/register.css */
 
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
 .register-container {
   text-align: center;
   padding: 20px;
@@ -23,19 +16,19 @@ form {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-top: 20vh; /* Adjust the margin-top for vertical centering */
+  margin-top: 5vh; /* Adjust the margin-top for vertical centering */
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-align: left;
 }
 
 input {
   width: calc(100% - 16px); /* Adjust the width as needed */
   padding: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
   box-sizing: border-box;
 }
 
@@ -53,5 +46,5 @@ button:hover {
 }
 
 p {
-  margin-top: 20px;
+  margin-top: 5px;
 }

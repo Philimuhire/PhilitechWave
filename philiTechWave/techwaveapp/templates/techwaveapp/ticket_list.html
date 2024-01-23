@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block title %}Ticket List{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'techwaveapp/css/ticket_list.css' %}">
+{% endblock %}
+
 {% block content %}
   <h2>Your Tickets</h2>
   <ul>
@@ -7,5 +15,5 @@
       <li><a href="{% url 'ticket_detail' ticket.id %}">{{ ticket.title }}</a></li>
     {% endfor %}
   </ul>
-  <a href="{% url 'create_ticket' %}">Create a New Ticket</a>
+  <a href="{% url 'create_ticket' %}" id="create-ticket-link">Create a New Ticket</a>
 {% endblock %}
